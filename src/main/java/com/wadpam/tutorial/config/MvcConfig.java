@@ -1,6 +1,7 @@
 package com.wadpam.tutorial.config;
 
 import com.wadpam.open.json.SkipNullObjectMapper;
+import com.wadpam.open.user.config.UserConfig;
 import com.wadpam.open.web.RestJsonExceptionResolver;
 import java.util.List;
 
@@ -21,6 +22,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @Configuration
 @Import(value={
+    UserConfig.class
     })
 public class MvcConfig extends WebMvcConfigurerAdapter {
     
