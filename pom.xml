@@ -50,7 +50,18 @@
             <artifactId>jsonp</artifactId>
             <version>${openserver.version}</version>
         </dependency>
-                        
+        <dependency>
+            <groupId>com.wadpam.openserver</groupId>
+            <artifactId>users</artifactId>
+            <version>${openserver.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.mardao</groupId>
+            <artifactId>mardao-gae</artifactId>
+            <version>2.1.8</version>
+        </dependency>
+                                                                        
         <!-- These dependencies are here just for enabling logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
