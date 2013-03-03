@@ -28,6 +28,16 @@
         </listener-class>
     </listener>
 
+    <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/api/default/*</url-pattern>
+            <url-pattern>/api/*/_admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
     <servlet>
         <servlet-name>spring-dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
