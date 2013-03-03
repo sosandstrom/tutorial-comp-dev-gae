@@ -16,7 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <logging.level>FINE</logging.level>
         <spring.version>3.2.0.RELEASE</spring.version>
-        <openserver.version>14</openserver.version>
+        <openserver.version>16-SNAPSHOT</openserver.version>
+        <opencomponents.version>1-SNAPSHOT</opencomponents.version>
     </properties>
 
     <dependencies>
@@ -42,6 +43,11 @@
                         
         <dependency>
             <groupId>com.wadpam.openserver</groupId>
+            <artifactId>domain</artifactId>
+            <version>${openserver.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wadpam.openserver</groupId>
             <artifactId>errors</artifactId>
             <version>${openserver.version}</version>
         </dependency>
@@ -50,16 +56,17 @@
             <artifactId>jsonp</artifactId>
             <version>${openserver.version}</version>
         </dependency>
+
         <dependency>
-            <groupId>com.wadpam.openserver</groupId>
+            <groupId>com.wadpam.opencomponents</groupId>
             <artifactId>users</artifactId>
-            <version>${openserver.version}</version>
+            <version>${opencomponents.version}</version>
         </dependency>
 
         <dependency>
             <groupId>net.sf.mardao</groupId>
             <artifactId>mardao-gae</artifactId>
-            <version>2.1.8</version>
+            <version>2.2.0</version>
         </dependency>
                                                                         
         <!-- These dependencies are here just for enabling logging -->

@@ -1,7 +1,9 @@
 package com.wadpam.tutorial.config;
 
+import com.wadpam.open.config.DomainConfig;
 import com.wadpam.open.json.SkipNullObjectMapper;
 import com.wadpam.open.user.config.UserConfig;
+import com.wadpam.open.web.BasicAuthenticationInterceptor;
 import com.wadpam.open.web.RestJsonExceptionResolver;
 import java.util.List;
 
@@ -12,6 +14,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -22,6 +25,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @Configuration
 @Import(value={
+    DomainConfig.class,
     UserConfig.class
     })
 public class MvcConfig extends WebMvcConfigurerAdapter {
@@ -37,6 +41,19 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         MappingJacksonHttpMessageConverter converter = new MappingJacksonHttpMessageConverter();
         converter.setObjectMapper(skipNullMapper);
         converters.add(converter);
+    }
+    
+    // -------------- Interceptors -----------------------
+    
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(basicAuthenticationInterceptor());
+    }
+    
+    @Bean
+    public BasicAuthenticationInterceptor basicAuthenticationInterceptor() {
+        BasicAuthenticationInterceptor bean = new BasicAuthenticationInterceptor();
+        return bean;
     }
     
     // -------------- Serving Resources ----------------------
