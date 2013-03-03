@@ -16,8 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <logging.level>FINE</logging.level>
         <spring.version>3.2.0.RELEASE</spring.version>
-        <openserver.version>16-SNAPSHOT</openserver.version>
-        <opencomponents.version>1-SNAPSHOT</opencomponents.version>
+        <openserver.version>16</openserver.version>
+        <opencomponents.version>1</opencomponents.version>
     </properties>
 
     <dependencies>
