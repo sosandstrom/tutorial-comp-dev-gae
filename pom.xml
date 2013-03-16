@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <logging.level>FINE</logging.level>
         <spring.version>3.2.0.RELEASE</spring.version>
-        <openserver.version>16</openserver.version>
+        <openserver.version>18</openserver.version>
         <opencomponents.version>1</opencomponents.version>
     </properties>
 
@@ -68,7 +68,13 @@
             <artifactId>mardao-gae</artifactId>
             <version>2.2.0</version>
         </dependency>
-                                                                        
+        
+        <dependency>
+            <groupId>com.wadpam.oauth</groupId>
+            <artifactId>oauth2-client</artifactId>
+            <version>1.0</version>
+        </dependency>
+        
         <!-- These dependencies are here just for enabling logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
