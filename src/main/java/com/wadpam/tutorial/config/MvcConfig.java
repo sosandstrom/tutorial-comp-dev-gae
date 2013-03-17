@@ -64,37 +64,8 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         converter.setObjectMapper(skipNullMapper);
         converters.add(converter);
     }
-    
-    // -------------- Interceptors -----------------------
-    
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(basicAuthenticationInterceptor());
-//        registry.addInterceptor(oauth2Interceptor());
-//    }
-//    
-//    @Bean
-//    public BasicAuthenticationInterceptor basicAuthenticationInterceptor() {
-//        BasicAuthenticationInterceptor bean = new BasicAuthenticationInterceptor();
-//        return bean;
-//    }
-//    
-//    @Bean
-//    public OAuth2Interceptor oauth2Interceptor() {
-//        OAuth2Interceptor bean = new OAuth2Interceptor();
-//        
-//        // prepare the whitelist for OAuth2Interceptor
-//        Map.Entry<String, Collection<String>> registerFederated = 
-//                
-//                // /api/tutorial/federated/v11 for GET and POST:
-//                new AbstractMap.SimpleImmutableEntry(
-//                    "\\A/api/[^/]+/federated/v.*", 
-//                    Arrays.asList("GET", "POST"));
-//        
-//        bean.setWhitelistedMethods(Arrays.asList(registerFederated));
-//        
-//        return bean;
-//    }
+
+    // interceptors configured in interceptor-security.xml
     
     // -------------- Serving Resources ----------------------
 

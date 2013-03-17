@@ -37,15 +37,11 @@ public class TutorialService {
         tutorial.setPassword(TUTORIAL);
         domainService.create(tutorial);
         
-        // create a facebook Factory in tutorial namespace:
-        DomainNamespaceFilter.doInNamespace(TUTORIAL, new Runnable() {
-            public void run() {
-                DFactory facebook = new DFactory();
-                facebook.setId(OAuth2Service.PROVIDER_ID_FACEBOOK);
-                facebook.setClientId("255653361131262");
-                factoryService.create(facebook);
-            }
-        });
+        DFactory facebook = new DFactory();
+        facebook.setId(OAuth2Service.PROVIDER_ID_FACEBOOK);
+        facebook.setClientId("255653361131262");
+        facebook.setClientSecret("Not Needed");
+        factoryService.create(facebook);
     }
     
 }
