@@ -141,5 +141,11 @@
             </releases>
             <url>https://raw.github.com/sosandstrom/maven-repo/master/releases</url>
         </repository>
+         <repository>
+             <id>org.springframework.maven.milestone</id>
+             <name>Spring Maven Milestone Repository</name>
+             <url>http://maven.springframework.org/milestone</url>
+             <snapshots><enabled>false</enabled></snapshots>
+         </repository>
     </repositories>
 </project>
