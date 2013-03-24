@@ -74,6 +74,13 @@
             <artifactId>oauth2-client</artifactId>
             <version>1.0</version>
         </dependency>
+        <!-- patching google dependency for oauth2-client-1.0 -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-google</artifactId>
+            <version>1.0.0.M2</version>
+            <scope>provided</scope>
+        </dependency>
         
         <!-- These dependencies are here just for enabling logging -->
         <dependency>
@@ -141,11 +148,18 @@
             </releases>
             <url>https://raw.github.com/sosandstrom/maven-repo/master/releases</url>
         </repository>
-         <repository>
-             <id>org.springframework.maven.milestone</id>
-             <name>Spring Maven Milestone Repository</name>
-             <url>http://maven.springframework.org/milestone</url>
-             <snapshots><enabled>false</enabled></snapshots>
-         </repository>
+        <repository>
+            <id>org.springframework.maven.milestone</id>
+            <name>Spring Maven Milestone Repository</name>
+            <url>http://maven.springframework.org/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring.social.google</id>
+            <name>Spring Social Google</name>
+            <url>https://github.com/GabiAxel/maven/raw/master/</url>
+        </repository>
     </repositories>
 </project>
