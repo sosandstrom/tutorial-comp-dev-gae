@@ -79,7 +79,6 @@
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-google</artifactId>
             <version>1.0.0.M2</version>
-            <scope>provided</scope>
         </dependency>
         
         <!-- These dependencies are here just for enabling logging -->
